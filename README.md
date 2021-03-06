@@ -4,12 +4,12 @@ The landscape of QR codes is complex, with many different standards and encoding
 
 The main character encoding modes supported by QR codes are the following ([table copied from here](https://raw.githubusercontent.com/soldair/node-qrcode/master/README.md))
 
-| Mode         | Characters                                                 | Compression                               |
-| ------------ | ---------------------------------------------------------- | ----------------------------------------- |
-| Numeric      | 0, 1, 2, 3, 4, 5, 6, 7, 8, 9                               | 3 characters are represented by 10 bits   |
-| Alphanumeric | 0–9, A–Z (upper-case only), space, $, %, \*, +, -, ., /, : | 2 characters are represented by 11 bits   |
-| Kanji        | Characters from the Shift JIS system based on JIS X 0208   | 2 kanji are represented by 13 bits        |
-| Byte         | Characters from the ISO/IEC 8859-1 character set           | Each characters are represented by 8 bits |
+| Mode         | Characters                                                 | Compression                               | Max Characters |
+| ------------ | ---------------------------------------------------------- | ----------------------------------------- | -------------- |
+| Numeric      | 0, 1, 2, 3, 4, 5, 6, 7, 8, 9                               | 3 characters are represented by 10 bits   | 7,089          |
+| Alphanumeric | 0–9, A–Z (upper-case only), space, $, %, \*, +, -, ., /, : | 2 characters are represented by 11 bits   | 4,296          |
+| Kanji        | Characters from the Shift JIS system based on JIS X 0208   | 2 kanji are represented by 13 bits        | 2,953          |
+| Byte         | Characters from the ISO/IEC 8859-1 character set           | Each characters are represented by 8 bits | 1,817          |
 
 # The problem
 
