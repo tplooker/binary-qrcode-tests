@@ -19,13 +19,13 @@ as they will often stop reading when they encounter a unsupported character, or 
 # Possible solutions
 
 1. Encode in 'byte' mode with raw binary, only support readers that do not enforce ISO/IEC 8859-1 character encoding
-   Pro's - The most concise encoding of raw binary data
-   Con's - Difficulties with QR code readers that assume ISO/IEC 8859-1, there is also an inability to easily encode data in a way that can be formatted as a URI to support deep linking from outside of an application context.
+   - Pro's - The most concise encoding of raw binary data
+   - Con's - Difficulties with QR code readers that assume ISO/IEC 8859-1, there is also an inability to easily encode data in a way that can be formatted as a URI to support deep linking from outside of an application context.
 2. Encode in 'byte' mode with base64 encoded content
-   Pro's - Supported by all QR code readers as it avoids collision with ISO/IEC 8859-1
-   Con's - Not very efficient, base64 is a 6 bit encoding scheme and the QR code 'byte' mode encoding is 8 bit, this means 2 bits of every byte in the encoded data wont be used. Leading to about 25% bloat in payload size
+   - Pro's - Supported by all QR code readers as it avoids collision with ISO/IEC 8859-1
+   - Con's - Not very efficient, base64 is a 6 bit encoding scheme and the QR code 'byte' mode encoding is 8 bit, this means 2 bits of every byte in the encoded data wont be used. Leading to about 25% bloat in payload size
 3. Encode in 'alphanumeric' mode with upper-cased base32 content.
-   Pro's - Second most efficient encoding of raw binary data as base32 is 5 bits and the QR code `alphanumeric` mode is a 5.5 bit encoding format (i.e 11 bits to every two bytes), information is also in text form suitable for URI formatting for deep linking
-   Con's slightly less efficient that raw binary ~ .5 bit per byte (6.25%).
+   - Pro's - Second most efficient encoding of raw binary data as base32 is 5 bits and the QR code `alphanumeric` mode is a 5.5 bit encoding format (i.e 11 bits to every two bytes), information is also in text form suitable for URI formatting for deep linking
+   - Con's slightly less efficient that raw binary ~ .5 bit per byte (6.25%).
 
 In summary dependent on requirements, option 1 is the most concise, however option 3 offers the best tradeoffs in terms of broad QR code reader support and URI encode-ability whilst paying a 6.25% cost in size overhead.
