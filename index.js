@@ -36,7 +36,7 @@ async function encodeDataToQrcode (data, mode) {
         },
     ]);
     
-    await fs.promises.writeFile(`qrcode-${mode}-${data.length}.png`, result);
+    await fs.promises.writeFile(`examples/qrcode-${mode}-${data.length}.png`, result);
 }
 
 main();
