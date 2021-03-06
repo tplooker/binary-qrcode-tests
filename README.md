@@ -1,8 +1,8 @@
 # Encoding binary data in QR Codes
 
-The landscape of QR codes is complex, with many different standards and encoding schemes there is a variety of guidance as to how to appropriately use these for encoding different types of data. This repo is home to a set of tests aimed at exploring the most appropriate way to encode raw binary into a QR code.
+The landscape of QR codes is complex, with many different standards and encoding schemes, there is a variety of guidance as to how to appropriately use these for encoding different types of data. This repository is home to a set of tests aimed at exploring the most appropriate way to encode raw binary into a QR code.
 
-The main primary character encoding modes supported by QR codes are the following (table [copied from here](https://raw.githubusercontent.com/soldair/node-qrcode/master/README.md))
+The main character encoding modes supported by QR codes are the following ([table copied from here](https://raw.githubusercontent.com/soldair/node-qrcode/master/README.md))
 
 | Mode         | Characters                                                 | Compression                               |
 | ------------ | ---------------------------------------------------------- | ----------------------------------------- |
